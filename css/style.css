@@ -1,34 +1,71 @@
+/* style.css */
 body {
-    margin:0;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: grid;
+    grid-template-columns: 200px 1fr; /* Setăm coloana pentru navbar și conținut */
+    grid-template-rows: 100vh auto; /* Înălțimea navbar-ului și conținutului */
+    grid-template-areas: 
+        "nav main"
+        "footer footer"; /* Arie pentru navbar, conținut și footer */
 }
-
-
-/* Navbar */
 
 nav {
-    background-color: rgb(243, 198, 198);
+    background-color: #333;
+    color: white;
+    padding: 1.25rem;
+    grid-area: nav; /* Fixăm navbar-ul în arie */
+    height: 100%; /* Înălțimea de 100% a navbar-ului */
 }
 
-
-
-
-
-
-
-
-/* Header */
-.arrow {
-    border: solid black;
-  border-width: 0 3px 3px 0;
-  display: inline-block;
-  padding: 3px;
+.home {
+    text-align: center;
+    padding: 0.25rem;
+    border-bottom: 1px solid grey;
 }
 
-.down {
-    transform: rotate(45deg);
-    -webkit-transform: rotate(45deg);
-  }
+.homelink {
+    text-decoration: none;
+    color: white;
+    font-size: 26px;
+    
+}
 
+.nav-links ul {
+    list-style: none;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+}
 
+.nav-links li {
+    margin-top: 10px; /* adăugăm spațiu între fiecare element de listă */
+}
 
-/* --------------------------------- */
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s ease, border-bottom 0.3s ease;
+    padding-bottom: 5px;
+    display: block; /* facem link-urile să fie blocuri pentru a putea aplica margin și padding */
+    padding-top: 10px; /* adăugăm spațiu între bordura de sus și text */
+}
+
+.nav-links a:hover {
+    color: #ff0000e0;
+    border-bottom: 2px solid #ffffffd3;
+}
+
+main {
+    padding: 20px; /* Adăugăm un padding pentru conținut */
+    grid-area: main; /* Fixăm conținutul în arie */
+}
+
+footer {
+    grid-column: span 2; /* Face footer-ul să se întindă pe toată lățimea */
+    background-color: #333;
+    color: white;
+    padding: 1.25rem;
+    grid-area: footer; /* Fixăm footer-ul în arie */
+}
