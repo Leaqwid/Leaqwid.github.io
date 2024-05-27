@@ -65,7 +65,7 @@ nav {
     border-bottom: 1px solid #ffffffd3;
 }
 
-ol {
+#project-list {
     background-color: #b4b4b4bb;
     margin: 2rem;
     border: 1px solid;
@@ -74,24 +74,33 @@ ol {
     
 }
 
-ol>li {
-    border: 2px solid ;
-    border-radius: 1rem;
+#project-list>li {
+    border: 2px double grey ;
     text-align: center;
+    transition: color 0.5 ease;
 }
 
-ol >li >a {
+
+#project-list >li >a {
     
     text-decoration: none;
     color: rgba(0, 0, 0, 0.658);
     font-size: 2rem;
     font-weight: bold;
-    ;
     transition: color 0.5s ease;
 }
 
-ol>li>a:hover {
+#project-list>li>a:hover {
     color: red;
+}
+
+.list-item {
+    
+}
+
+.contactlist {
+    
+
 }
 
 .wrapper {

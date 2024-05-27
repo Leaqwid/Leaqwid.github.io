@@ -1,6 +1,6 @@
 $(document).ready(function() {
     var username = "Leaqwid";
-    var linkCounter = 0; // Variabilă pentru a număra linkurile
+    var linkCounter = 0; 
 
     function fetchAndDisplayProjects() {
         $.ajax({
@@ -8,7 +8,7 @@ $(document).ready(function() {
             dataType: "json",
             success: function(data) {
                 var projects = $("#project-list");
-                linkCounter = 0; // Resetăm contorul la început
+                linkCounter = 0; 
 
                 data.sort(function(a, b) {
                     return new Date(b.created_at) - new Date(a.created_at);
@@ -25,10 +25,10 @@ $(document).ready(function() {
                     }).text(repo.name);
                     listItem.append(link);
                     projects.append(listItem);
-                    linkCounter++; // Incrementăm contorul pentru fiecare link adăugat
+                    linkCounter++; 
                 });
 
-                $("#link-counter").text(linkCounter); // Actualizăm conținutul elementului cu id-ul "link-counter" cu numărul de linkuri
+                $("#link-counter").text(linkCounter); 
             },
             error: function() {
                 $("#project-list").append("<li>Eroare la încărcarea listei de proiecte.</li>");
