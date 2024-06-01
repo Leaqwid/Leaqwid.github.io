@@ -1,138 +1,77 @@
-/* style.css */
 body {
     margin: 0;
-    background-color: rgba(230, 229, 229, 0.712);
     font-family: Arial, sans-serif;
-    display: grid;
-    grid-template-columns: 200px 1fr; /* Setăm coloana pentru navbar și conținut */
-    grid-template-rows: 100vh auto; /* Înălțimea navbar-ului și conținutului */
-    grid-template-areas: 
-        "nav main"
-        "footer footer"; /* Arie pentru navbar, conținut și footer */
 }
 
-nav {
-    background-color: #333;
-    color: white;
-    padding: 1.25rem;
-    grid-area: nav; /* Fixăm navbar-ul în arie */
-    height: 100%; /* Înălțimea de 100% a navbar-ului */
-}
-
-.home {
-    text-align: center;
-    padding: 0.25rem;
-    border-bottom: 1px solid grey;
-}
-
-.homelink {
-    text-decoration: none;
-    color: white;
-    font-size: 26px;
-    transition: color 0.8s ease;
-    
-}
-
-.home a:hover {
-    color: #ff0000e0;
-    
-}
-
-.nav-links ul {
-    list-style: none;
-    text-align: center;
-    padding: 0;
-    margin: 0;
-}
-
-.nav-links li {
-    margin-top: 1rem; /* adăugăm spațiu între fiecare element de listă */
-}
-
-.nav-links a {
-    color: white;
-    text-decoration: none;
-    font-size: 18px;
-    transition: color 0.45s ease, border-bottom 0.6s ease , border-top 0.6s ease;
-    padding-bottom: 0.5rem;
-    display: block; /* facem link-urile să fie blocuri pentru a putea aplica margin și padding */
-    padding-top: 0.5rem; /* adăugăm spațiu între bordura de sus și text */
-}
-
-.nav-links a:hover {
-    color: red;
-    border-top: 1px solid #ffffffd3;
-    border-bottom: 1px solid #ffffffd3;
-}
-
-#project-list {
-    background-color: #b4b4b4bb;
-    margin: 2rem;
-    border: 1px solid;
-    border-radius: 1rem;
-    
-    
-}
-
-#project-list>li {
-    border: 2px double grey ;
-    text-align: center;
-    transition: color 0.5 ease;
-}
-
-
-#project-list >li >a {
-    
-    text-decoration: none;
-    color: rgba(0, 0, 0, 0.658);
-    font-size: 2rem;
-    font-weight: bold;
-    transition: color 0.5s ease;
-}
-
-#project-list>li>a:hover {
-    color: red;
-}
-
-.list-item {
-    
-}
-
-.contactlist {
-    
-
-}
-
-.wrapper {
- 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.container {
-    border: 4px solid black;
-    border-radius: 1rem;
+#contentContainer {
+    flex: 1;
     padding: 20px;
+    box-sizing: border-box;
 }
 
-.content {
-    text-align: center;
-    font-size: 20px;
-    font-weight: bold;
+main {
+    padding: 20px;
+    background-color: #d8cbcb69;
+    border-radius: 8px;
 }
 
 h1 {
-    text-align: center;
-    border-bottom: 1px solid grey;
+    margin-top: 0;
 }
 
 
+.container {
+    display: flex;
+    height: 100vh;
+}
 
-footer {
-    grid-column: span 2; /* Face footer-ul să se întindă pe toată lățimea */
+.logoWebsite {
+    font-weight: bolder;
+    font-size: xx-large;
+    text-align: center;
+    border-bottom: orangered double;
+}
+
+.navDesign {
+    width: 250px;
     background-color: #333;
     color: white;
-    padding: 1.25rem;
-    grid-area: footer; /* Fixăm footer-ul în arie */
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
 }
+
+.nav-links ul {
+    list-style-type: none;
+}
+
+.nav-links>ul>li>a {
+    text-align: center;
+    font-size: large;
+    border-top: 1px solid rgba(128, 128, 128, 0.644);
+    border-bottom: 1px solid rgba(128, 128, 128, 0.644);
+}
+
+.navDesign .nav-links ul {
+    padding: 0;
+}
+
+.navDesign .nav-links ul li {
+    margin: 10px 0;
+}
+
+.navDesign a {
+    color: white;
+    text-decoration: none;
+    display: block;
+}
+
+.navDesign a:hover {
+    text-decoration: underline;
+}
+
+
+
+
