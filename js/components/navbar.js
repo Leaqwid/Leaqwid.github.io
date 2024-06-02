@@ -2,7 +2,7 @@
 function loadNavbar() {
     var navbarHtml = `
     <nav>
-        <a class="logoWebsite" href="/index.html" >Acasa</a>
+        <a class="logoWebsite" href="index.html" >Acasa</a>
         <div class="nav-links">
             <ul >
                 <li><a href="#" id="aboutLink">Despre mine</a></li>
@@ -18,3 +18,5 @@ function loadNavbar() {
 document.addEventListener('DOMContentLoaded', loadNavbar);
 
 export { loadNavbar };
+
+

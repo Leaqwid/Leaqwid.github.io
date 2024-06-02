@@ -1,39 +1,32 @@
-// github.js
-var username = "Leaqwid";
-var linkCounter = 0;
+async function fetchProjects() {
+    try {
+        const response = await fetch('https://api.github.com/users/TambaRobertCristian/repos');
+        const projects = await response.json();
+        return projects;
+    } catch (error) {
+        console.error('Error fetching projects:', error);
+        return [];
+    }
+}
 
-function fetchAndDisplayProjects() {
-    $.ajax({
-        url: "https://api.github.com/users/" + username + "/repos",
-        dataType: "json",
-        success: function(data) {
-            var projects = $("#project-list");
-            linkCounter = 0;
+// Funcția pentru a afișa proiectele în lista
+async function displayProjects() {
+    const projects = await fetchProjects();
+    const projectList = document.getElementById('project-list');
+    
+    // Golește lista existentă
+    projectList.innerHTML = '';
 
-            data.sort(function(a, b) {
-                return new Date(b.created_at) - new Date(a.created_at);
-            });
-
-            projects.empty();
-
-            $.each(data, function(index, repo) {
-                var listItem = $("<li>");
-                var link = $("<a>").attr({
-                    "href": repo.html_url,
-                    "target": "_blank",
-                    "rel": "noopener noreferrer"
-                }).text(repo.name);
-                listItem.append(link);
-                projects.append(listItem);
-                linkCounter++;
-            });
-
-            $("#link-counter").text(linkCounter);
-        },
-        error: function() {
-            $("#project-list").append("<li>Eroare la încărcarea listei de proiecte.</li>");
-        }
+    // Adaugă fiecare proiect ca un element <li>
+    projects.forEach(project => {
+        const listItem = document.createElement('li');
+        listItem.textContent = project.name;
+        projectList.appendChild(listItem);
     });
 }
 
-export { fetchAndDisplayProjects };
+// Afișează inițial lista de proiecte
+displayProjects();
+
+// Actualizează lista de proiecte la fiecare 30 de secunde (30000 milisecunde)
+setInterval(displayProjects, 30000);
