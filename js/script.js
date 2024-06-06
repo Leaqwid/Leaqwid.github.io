@@ -16,7 +16,8 @@ document.addEventListener('DOMContentLoaded', () => {
     });    
     const aboutLink = document.getElementById('aboutLink');
     const projectsLink = document.getElementById('projectsLink');
-    const downloadsLink = document.getElementById('howLink');
+    const howLink = document.getElementById('howLink');
+    const galeryLink = document.getElementById('galeryLink')
 
    
 
@@ -37,6 +38,12 @@ document.addEventListener('DOMContentLoaded', () => {
     howLink.addEventListener('click', (event) => {
         event.preventDefault();
         loadContent('how');
+        navbar.classList.add('hidden');
+        navbar.classList.remove('visible');
+    });
+    galeryLink.addEventListener('click', (event) => {
+        event.preventDefault();
+        loadContent('galery');
         navbar.classList.add('hidden');
         navbar.classList.remove('visible');
     });

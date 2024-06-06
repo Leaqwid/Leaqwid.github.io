@@ -150,6 +150,7 @@ main {
     padding: 20px;
     background-color: #d8cbcb69;
     border-radius: 8px;
+    margin-top: 2rem;
 }
 
 h1 {
@@ -196,11 +197,51 @@ h1 {
  
 /* ################ Despre mine ################# */
 
-.listDetails {
+.listDetails>li>p {
+    font-weight: bold;
+    font-size: large;
+    margin-top: 1rem;
+
+
+}
+.listDetails>li>ol>li {
+    font-size: larger;
+    width: fit-content;
+    background-color: rgba(0, 0, 0, 0.103);
+}
+
+
+
+
+
+
+
+/* #############Cum am facut acest Website############### */
+
+
+.howDiv>p {
+    text-align: center;
+    margin-top: 2rem;
+    font-weight: bold;
+    font-size: larger;
 
 }
 
-.contactList {
+/* ############### Projects ###################### */
 
+.repository {
+   text-align: center;
+   border: 2px solid grey;
+   margin-top: 1rem;
+}
 
+.repository>a {
+    color:rgb(65, 32, 11);
+    text-decoration: none;
+    font-weight: bolder;
+    font-size: large;
+    transition: color 1s ease;
+}
+.repository>a:hover {
+    color: rgba(255, 115, 0, 0.671);
 }
