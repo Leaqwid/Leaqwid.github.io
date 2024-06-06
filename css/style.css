@@ -10,7 +10,7 @@ body {
 /* ------------------------------------------------------------------ */
 
 /* ---------------------------- For responsive style --------------------------- */
-@media screen and (max-width: 600px) {
+@media screen and (min-width: 300px) {
     .navbar {
         position: absolute;
         width: 100%;
@@ -51,7 +51,7 @@ body {
     }
 }
 
-@media screen and (min-width: 601px) {
+@media screen and (max-width: 601px) {
     .hamburger {
         display: none;
     }
@@ -230,9 +230,18 @@ h1 {
 /* ############### Projects ###################### */
 
 .repository {
+    display: flex;
+    justify-content: space-between;
    text-align: center;
    border: 2px solid grey;
    margin-top: 1rem;
+}
+
+.repository>h4 {
+    margin-left: 1rem;
+    color: red;
+    font-weight: bolder;
+    font-size: larger;
 }
 
 .repository>a {
@@ -241,6 +250,8 @@ h1 {
     font-weight: bolder;
     font-size: large;
     transition: color 1s ease;
+    padding-top: 1.25rem;
+    padding-right: 1.25rem;
 }
 .repository>a:hover {
     color: rgba(255, 115, 0, 0.671);

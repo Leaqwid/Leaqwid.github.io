@@ -13,7 +13,7 @@ async function fetchRepositories() {
           const repoElement = document.createElement('div');
           repoElement.className = 'repository';
           repoElement.innerHTML = `
-              <h2>${repo.name}</h2>
+              <h4>${repo.name}</h4>
               <p>${repo.description || 'No description'}</p>
               <a href="${repo.html_url}" target="_blank">View Repository</a>
           `;
